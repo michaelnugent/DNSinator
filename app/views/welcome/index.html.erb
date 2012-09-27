@@ -1,0 +1,25 @@
+
+<table border="1" id="domaintable">
+  <thead>
+    <tr>
+      <th>name</th>
+      <th>master</th>
+      <th>last_check</th>
+      <th>type</th>
+      <th>notified_serial</th>
+      <th>account</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @domains.each do |domain| %>
+      <tr>
+        <td><%= domain.name %></td>
+        <td><%= domain.master %></td>
+        <td><%= domain.last_check %></td>
+        <td><%= domain.type %></td>
+        <td><%= domain.notified_serial %></td>
+        <td><%= domain.account %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
